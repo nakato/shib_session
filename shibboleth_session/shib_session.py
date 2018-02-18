@@ -1,4 +1,3 @@
-import copy
 from html.parser import HTMLParser
 import re
 
