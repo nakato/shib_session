@@ -6,10 +6,9 @@ import requests
 class ShibSession(requests.Session):
 
     def __init__(self, username: str, password: str,
-                 login_url: str, *args,
-                 idp_url: str = None,
-                 **kwargs) -> None:
-        super(ShibSession, self).__init__(*args, **kwargs)
+                 login_url: str,
+                 idp_url: str = None) -> None:
+        super(ShibSession, self).__init__()
         self.username = username
         self.password = password
         self.login_url = login_url
